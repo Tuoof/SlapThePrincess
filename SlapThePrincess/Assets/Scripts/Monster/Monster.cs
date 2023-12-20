@@ -49,27 +49,47 @@ public class Monster: MonoBehaviour
     #region buff
     public void ModifyMaxHP(int modifier)
     {
-        m_maxHp += modifier;
+        Debug.Log($"modify max HP from {m_maxHp} to {m_maxHp + modifier}");
+        if(m_maxHp == m_hp)
+        {
+            m_maxHp += modifier;
+            m_hp = m_maxHp;
+        }
+        else
+        {
+            m_hp += modifier;
+            if(m_hp > m_maxHp)
+            {
+                m_maxHp = m_hp;
+            }
+        }
     }
 
     public void ModifyArmor(int modifier)
     {
+        Debug.Log($"modify Armor from {m_armor} to {m_armor + modifier}");
         m_armor += modifier;
     }
 
     public void ModifyPower(int modifier)
     {
+        Debug.Log($"modify Power from {m_power} to {m_power + modifier}");
         m_power += modifier;
     }
 
     public void ModifyHP(int modifier)
     {
-        m_hp += modifier;
+        if(m_hp + modifier < m_maxHp)
+        {
+            Debug.Log($"modify HP from {m_hp} to {m_hp + modifier}");
+            m_hp += modifier;
+        }
     }
 
     public void ModifyAttackSpeed(float modifier)
     {
         float val = m_attackSpeed * modifier;
+        Debug.Log($"modify AttackSpeed from {m_attackSpeed} to {m_attackSpeed + val}");
         m_attackSpeed += val;
     }
 

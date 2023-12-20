@@ -20,14 +20,14 @@ public class InputHandler : MonoBehaviour
     private void InitBuff()
     {
         skillCombinations = new Dictionary<string, IBuffStrategy>();
-        skillCombinations["ASD"] = new ASD();
-        skillCombinations["ASF"] = new ASF();
-        skillCombinations["ADF"] = new ADF();
-        skillCombinations["ADA"] = new ADA();
-        skillCombinations["AFA"] = new AFA();
-        skillCombinations["ASA"] = new ASA();
-        skillCombinations["FDA"] = new FDA();
-        skillCombinations["FSA"] = new FSA();
+        skillCombinations["ASD"] = new ASD(3);
+        skillCombinations["ASF"] = new ASF(4);
+        skillCombinations["ADF"] = new ADF(5);
+        skillCombinations["ADA"] = new ADA(8);
+        skillCombinations["AFA"] = new AFA(4);
+        skillCombinations["ASA"] = new ASA(8);
+        skillCombinations["FDA"] = new FDA(10);
+        skillCombinations["FSA"] = new FSA(10);
     }
 
     private void Update()

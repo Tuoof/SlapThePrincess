@@ -5,15 +5,36 @@ using UnityEngine;
 public class ASF : IBuffStrategy
 {
     private float m_cooldown;
-    public float Cooldown { get => m_cooldown; set => m_cooldown = value; }
+    private float m_lastApplicationTime;
+
+    public ASF(float cooldown)
+    {
+        Cooldown = cooldown;
+    }
+
+    public float Cooldown
+    {
+        get => m_cooldown;
+        set => m_cooldown = Mathf.Max(0, value); // Ensure cooldown is non-negative
+    }
 
     public void ApplyBuff(Monster monster)
     {
+        float currentTime = Time.time;
 
-        Debug.Log($"Class Name: {GetType().Name} current cooldown {m_cooldown}");
-        if (m_cooldown <= 0)
+        if (currentTime - m_lastApplicationTime >= m_cooldown)
         {
+            Debug.Log($"Class Name: {GetType().Name} applying buff!");
 
+            // Perform your buff logic here
+            monster.ModifyPower(3);
+
+            // Update the last application time
+            m_lastApplicationTime = currentTime;
+        }
+        else
+        {
+            Debug.Log($"Class Name: {GetType().Name} on cooldown. Remaining time: {m_cooldown - (currentTime - m_lastApplicationTime)}");
         }
     }
 }

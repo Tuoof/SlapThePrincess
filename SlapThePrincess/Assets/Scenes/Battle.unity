@@ -1991,7 +1991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6781a808af531e447850859007cc22d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerMonster: {fileID: 0}
+  PlayerMonster: {fileID: 1125118659}
 --- !u!1 &1594635094
 GameObject:
   m_ObjectHideFlags: 0
