@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    bool bCanMove = true;
     public float speed;
     public float groundDist;
 
@@ -29,10 +30,18 @@ public class PlayerController : MonoBehaviour
         MovePlayerRigidBody();
     }
 
+    public void SetCanPlayerMove(bool canMove)
+    { 
+        bCanMove = canMove; 
+    }
+
     private void MovePlayerRigidBody()
     {
-        Vector3 HorizontalMove = transform.right * speed * Time.fixedDeltaTime;
-        body.MovePosition(body.position + HorizontalMove);
+        if (bCanMove)
+        {
+            Vector3 HorizontalMove = transform.right * speed * Time.fixedDeltaTime;
+            body.MovePosition(body.position + HorizontalMove);
+        }
     }
 
     void MovePlayerTransform()
