@@ -17,4 +17,6 @@ public class MonsterSO : ScriptableObject
     public int Armor;
     [SerializeField]
     public float AttackSpeed;
+
+    [SerializeField] public int MonsterIndex;
 }

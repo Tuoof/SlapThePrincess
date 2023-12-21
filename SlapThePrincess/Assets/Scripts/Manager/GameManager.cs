@@ -5,9 +5,12 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public enum GameState { Idle, Battle }
+    public Event StartBattle;
+
 
     [SerializeField] PlayerController playerController;
     [SerializeField] BattleManager battleManager;
+    [SerializeField] BuffInputManager buffInputManager;
     [SerializeField] Camera mainCamera;
 
     GameState state;
@@ -29,22 +32,25 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void EnterBattle()
+    public void EnterBattle(int monsterIndex)
     {
         state = GameState.Battle;
         playerController.SetCanPlayerMove(false);
-        battleManager.gameObject.SetActive(true);
-        mainCamera.gameObject.SetActive(false);
 
-        Invoke("ExitBattle", 5);
+        battleManager.gameObject.SetActive(true);
+        battleManager.InitBattle(monsterIndex);
+
+        mainCamera.gameObject.SetActive(false);
     }
 
     public void ExitBattle()
     {
         state = GameState.Idle;
         playerController.SetCanPlayerMove(true);
-        battleManager.gameObject.SetActive(false);
-        mainCamera.gameObject.SetActive(true);
 
+        buffInputManager.ResetImage();
+        battleManager.gameObject.SetActive(false);
+
+        mainCamera.gameObject.SetActive(true);
     }
 }

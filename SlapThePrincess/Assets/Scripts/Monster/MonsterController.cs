@@ -5,6 +5,7 @@ using UnityEngine;
 public class MonsterController : MonoBehaviour
 {
     GameManager gameManager;
+    public int monsterIndex;
 
     private void Awake()
     {
@@ -27,8 +28,8 @@ public class MonsterController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            gameManager.EnterBattle(monsterIndex);
             Destroy(this.gameObject);
-            gameManager.EnterBattle();
         }
     }
 }

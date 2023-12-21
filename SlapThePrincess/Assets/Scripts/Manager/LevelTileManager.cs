@@ -8,7 +8,7 @@ public class LevelTileManager : MonoBehaviour
     Transform[] monsterSpawnComponents;
 
     public Transform spawnLoc;
-    public GameObject monsterPrefab;
+    public GameObject[] monsterPrefab;
 
     private void Awake()
     {
@@ -36,8 +36,12 @@ public class LevelTileManager : MonoBehaviour
     {
         monsterSpawnComponents = spawnLoc.GetComponentsInChildren<Transform>();
 
-        // choose random point to spawn monster
-        int MonsterSpawnIndex = Random.Range(0, monsterSpawnComponents.Length);
-        Instantiate(monsterPrefab, monsterSpawnComponents[MonsterSpawnIndex].position, Quaternion.identity, monsterSpawnComponents[MonsterSpawnIndex].transform);
+        foreach (var item in monsterSpawnComponents)
+        {
+            // choose random point to spawn monster
+            int MonsterSpawnIndex = Random.Range(0, monsterPrefab.Length);
+            Instantiate(monsterPrefab[MonsterSpawnIndex], item.position, Quaternion.identity, item.transform);
+        }
+        
     }
 }

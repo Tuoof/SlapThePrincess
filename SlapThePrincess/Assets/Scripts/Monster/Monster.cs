@@ -9,7 +9,9 @@ public class Monster: MonoBehaviour
     private int m_armor;
     private float m_attackSpeed;
 
-    public void ReInitMonster(MonsterSO data)
+    public int monsterIndex;
+
+    public void InitMonster(MonsterSO data)
     {
         m_name = data.Name;
         m_power = data.Power;
@@ -17,9 +19,25 @@ public class Monster: MonoBehaviour
         m_maxHp = data.MaxHP;
         m_armor = data.Armor;
         m_attackSpeed = data.AttackSpeed;
+
+        monsterIndex = data.MonsterIndex;
+    }
+
+    public void ReInitMonster(MonsterSO data)
+    {
+        m_name = data.Name;
+        m_power = data.Power;
+        m_armor = data.Armor;
+        m_attackSpeed = data.AttackSpeed;
     }
 
     #region combat
+
+    public int GetMyMaxtHP()
+    {
+        return m_maxHp;
+    }
+
     public int GetMyCurrentHP()
     {
         return m_hp;
@@ -30,6 +48,16 @@ public class Monster: MonoBehaviour
         float damage = CalculateDamage(target);
         target.ModifyHP(-(int)damage);
         Debug.Log($"{m_name} attacks {target.m_name} for {damage} damage. {target.m_name}'s HP: {target.GetMyCurrentHP()}");
+    }
+
+    public float GetPower()
+    {
+        return m_power;
+    }
+
+    public float GetArmor()
+    { 
+        return m_armor; 
     }
 
     public float GetMyAttackSpeed()
@@ -83,6 +111,9 @@ public class Monster: MonoBehaviour
         {
             Debug.Log($"modify HP from {m_hp} to {m_hp + modifier}");
             m_hp += modifier;
+
+            if (m_hp < 0)
+                m_hp = 0;
         }
     }
 
