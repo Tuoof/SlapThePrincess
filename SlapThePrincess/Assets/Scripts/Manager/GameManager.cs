@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public enum GameState { Idle, Battle }
+    public enum GameState { Idle, Battle , GameOver}
     public Event StartBattle;
 
 
@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] BattleManager battleManager;
     [SerializeField] BuffInputManager buffInputManager;
     [SerializeField] Camera mainCamera;
+
+    [SerializeField] GameObject HiddenUiOver;
+    [SerializeField] GameObject WinnerUi;
 
     GameState state;
 
@@ -52,5 +55,11 @@ public class GameManager : MonoBehaviour
         battleManager.gameObject.SetActive(false);
 
         mainCamera.gameObject.SetActive(true);
+    }
+
+    public void GameOver()
+    {
+        HiddenUiOver.SetActive(false);
+        WinnerUi.SetActive(true);
     }
 }

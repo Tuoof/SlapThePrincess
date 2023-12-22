@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6173004321401112911}
   - component: {fileID: 494199549567651073}
   m_Layer: 0
-  m_Name: KolangKalingfUnit
+  m_Name: KolangKalingUnit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -903858606, guid: 3621110083e9a6c408f4b2ed53682fc6, type: 3}
+  m_Sprite: {fileID: -285402081, guid: 390cbae4f442a7d458874441d0f591a9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,7 +98,7 @@ Animator:
   m_GameObject: {fileID: 2831491221226593116}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9e92019fc196297498f648326f227c30, type: 2}
+  m_Controller: {fileID: 9100000, guid: b4c31f675a0da5a45b06c3775462852a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -122,4 +122,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe9b398e1e402d34abac720e6c518999, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterIndex: 2
+  monsterIndex: 3

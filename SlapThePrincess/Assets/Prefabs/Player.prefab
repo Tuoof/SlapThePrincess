@@ -229,7 +229,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7295894156980604141}
   - component: {fileID: 7036023528548175394}
-  - component: {fileID: 7010521447679031562}
+  - component: {fileID: 6457902115191843657}
   m_Layer: 0
   m_Name: PlayerSprite
   m_TagString: Untagged
@@ -296,7 +296,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 293105935, guid: bc5981c41beddeb45b122acb87434267, type: 3}
+  m_Sprite: {fileID: 1684465657, guid: 50f5a01a6f3cfee4cbb5743447adb4ef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -307,7 +307,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &7010521447679031562
+--- !u!95 &6457902115191843657
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
@@ -317,7 +317,7 @@ Animator:
   m_GameObject: {fileID: 6257123391947010104}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 11ce86f0b90074f439bcfe595225a30d, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9d68f7f0daadd9e42a8acbf646f6cae8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

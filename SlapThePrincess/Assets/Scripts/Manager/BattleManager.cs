@@ -25,6 +25,8 @@ public class BattleManager : MonoBehaviour
 
     private int getIndexMonster;
 
+    [SerializeField] LevelChangeManager levelChangeManager;
+
     private void Awake()
     {
         gameManager = GameObject.FindFirstObjectByType<GameManager>();
@@ -46,6 +48,7 @@ public class BattleManager : MonoBehaviour
         SetMonsterUnit();
         m_myMonster.ReInitMonster(m_myMonsterSO);
         m_myMonsterAttack = StartCoroutine(MonsterAttackCoroutine(m_myMonster, m_enemy));
+        m_myMonsterAnim.SetTrigger("Attack");
     }
     private void InitEnemyMonster()
     {
@@ -76,8 +79,16 @@ public class BattleManager : MonoBehaviour
         {
             // Perform the attack
             attacker.PerformAttack(target);
+            if (attacker == m_enemy)
+            {
+                m_enemyAnim.SetTrigger("Attack");
+            }
+            else
+            {
+                m_myMonsterAnim.SetTrigger("Attack");
+            }
+                
             SetHpUi();
-
             if (target.GetMyCurrentHP() > 0 && attacker.GetMyCurrentHP() > 0)
             {
                 StartCoroutine(MonsterAttackCoroutine(attacker, target));
@@ -93,7 +104,7 @@ public class BattleManager : MonoBehaviour
                 else
                 {
                     StopAllCoroutines();
-                    Debug.Log($"Game Over");
+                    levelChangeManager.ChangeToMainMenu();
                 }
             }
         }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f9e0db5988d50e545bcddbb0b7f6bf33
+guid: 50f5a01a6f3cfee4cbb5743447adb4ef
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 512
+  spritePixelsToUnits: 4096
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sprite_sheet_slime_attack_0
+      name: MC_Complete_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1064
         y: 0
-        width: 322
-        height: 575
+        width: 2804
+        height: 4911
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b1beead32db21d42bc3c8a929bbfd27
-      internalID: 661887648
+      spriteID: 3f0484e4730c3154c81c73f75009c5f8
+      internalID: 1684465657
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite_sheet_slime_attack_1
+      name: MC_Complete_1
       rect:
         serializedVersion: 2
-        x: 382
+        x: 4535
         y: 0
-        width: 405
-        height: 575
+        width: 2657
+        height: 4911
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4df18e3f132c1c947bf6774c29a8cc6a
-      internalID: -1488960228
+      spriteID: 9747d74b020b24f4aaab9d38811f0c46
+      internalID: 1558415991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite_sheet_slime_attack_2
+      name: MC_Complete_2
       rect:
         serializedVersion: 2
-        x: 775
+        x: 7985
         y: 0
-        width: 500
-        height: 575
+        width: 2975
+        height: 4911
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a304a9d6dc481c04ea306b63f9c4aa2d
-      internalID: 61832550
+      spriteID: c4b164d44001a134b8335a88c12ee6b0
+      internalID: 1802341707
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sprite_sheet_slime_attack_3
+      name: MC_Complete_3
       rect:
         serializedVersion: 2
-        x: 1267
+        x: 11604
         y: 0
-        width: 485
-        height: 575
+        width: 2926
+        height: 4911
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,71 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0dce8e8b8046c04b8e7158034840d71
-      internalID: -542950338
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprite_sheet_slime_attack_4
-      rect:
-        serializedVersion: 2
-        x: 1748
-        y: 0
-        width: 465
-        height: 575
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a967e1b35cdafdd498b36172518a0190
-      internalID: -1737249873
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprite_sheet_slime_attack_5
-      rect:
-        serializedVersion: 2
-        x: 2205
-        y: 0
-        width: 427
-        height: 575
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a8c2dbc080d2ec34abc08e4690707142
-      internalID: -1605121071
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: sprite_sheet_slime_attack_6
-      rect:
-        serializedVersion: 2
-        x: 2648
-        y: 0
-        width: 348
-        height: 575
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 21588979ea144c047880b2eeb054bcc6
-      internalID: 1386913756
+      spriteID: 49c3234e8b7d775459b68defe9c667d9
+      internalID: -190848549
       vertices: []
       indices: 
       edges: []
@@ -272,7 +209,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 4a6e8ce7a334780448365c715553b18b
+    spriteID: c1c2495c6cbbbda48bfec89447dbc3cd
     internalID: 0
     vertices: []
     indices: 
@@ -280,13 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      sprite_sheet_slime_attack_0: 661887648
-      sprite_sheet_slime_attack_1: -1488960228
-      sprite_sheet_slime_attack_2: 61832550
-      sprite_sheet_slime_attack_3: -542950338
-      sprite_sheet_slime_attack_4: -1737249873
-      sprite_sheet_slime_attack_5: -1605121071
-      sprite_sheet_slime_attack_6: 1386913756
+      MC_Complete_0: 1684465657
+      MC_Complete_1: 1558415991
+      MC_Complete_2: 1802341707
+      MC_Complete_3: -190848549
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
